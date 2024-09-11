@@ -1,0 +1,44 @@
+{
+    "name": "vscode-bpmn-preview",
+    "displayName": "BPMN Preview",
+    "description": "BPMN previewer for VSCode.",
+    "version": "0.0.1",
+    "publisher": "mondhs",
+    "engines": {
+        "vscode": "^1.72.0"
+    },
+    "activationEvents": [
+        "onCommand:extension.previewBPMN"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "customEditors": [
+            {
+                "viewType": "vscodeBpmnPreview.bpmnViz",
+                "displayName": "Bpmn Vizualization",
+                "selector": [
+                    {
+                        "filenamePattern": "*.bpmn"
+                    },
+                    {
+                        "filenamePattern": "*.bpmn20.xml"
+                    }
+                ]
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.72.0",
+        "tslint": "^5.12.1",
+        "typescript": "^5.5.2",
+        "vscode-test": "^1.4.0"
+    }
+    
+}
