@@ -9,4 +9,5 @@ Based on https://github.com/process-analytics/bpmn-visualization-js
 * Open terminal
   * Run `npm i`
   * Run `npm run compile`
+  * Run `npm test`
 * In vscode open `extension.ts` and debug it as `VS Code Extension Development`
